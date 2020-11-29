@@ -36,7 +36,7 @@ export class FindOperatorFactoryChain implements OperatorFactoryChain {
         );
       case operations.FIND_PREV:
         return new RepeatOperator(
-          new FindNextOperator(this.findMasterClient),
+          new FindPrevOperator(this.findMasterClient),
           repeat
         );
     }
