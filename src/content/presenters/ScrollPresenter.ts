@@ -108,7 +108,7 @@ export type Point = { x: number; y: number };
 export default interface ScrollPresenter {
   getScroll(): Point;
   scrollVertically(amount: number, smooth: boolean): void;
-  scrollHorizonally(amount: number, smooth: boolean): void;
+  scrollHorizontally(amount: number, smooth: boolean): void;
   scrollPages(amount: number, smooth: boolean): void;
   scrollTo(x: number, y: number, smooth: boolean): void;
   scrollToTop(smooth: boolean): void;
@@ -132,7 +132,7 @@ export class ScrollPresenterImpl {
     new Scroller(target, smooth).scrollBy(0, delta);
   }
 
-  scrollHorizonally(count: number, smooth: boolean): void {
+  scrollHorizontally(count: number, smooth: boolean): void {
     const target = scrollTarget();
     let delta = SCROLL_DELTA_X * count;
     if (scrolling) {

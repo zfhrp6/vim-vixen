@@ -19,7 +19,7 @@ describe("ScrollOperatorFactoryChain", () => {
         new MockSettingRepository()
       );
       expect(
-        sut.create({ type: operations.SCROLL_HORIZONALLY, count: 10 }, 0)
+        sut.create({ type: operations.SCROLL_HORIZONTALLY, count: 10 }, 0)
       ).to.be.instanceOf(HorizontalScrollOperator);
       expect(
         sut.create({ type: operations.SCROLL_VERTICALLY, count: 10 }, 0)

@@ -30,7 +30,7 @@ export default class ScrollOperatorFactoryChain
           this.settingRepository,
           op.count * repeat
         );
-      case operations.SCROLL_HORIZONALLY:
+      case operations.SCROLL_HORIZONTALLY:
         return new HorizontalScrollOperator(
           this.scrollPresenter,
           this.settingRepository,

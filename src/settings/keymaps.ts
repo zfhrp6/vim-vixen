@@ -4,8 +4,8 @@ const fields = [
   [
     ['scroll.vertically?{"count":1}', "Scroll down"],
     ['scroll.vertically?{"count":-1}', "Scroll up"],
-    ['scroll.horizonally?{"count":-1}', "Scroll left"],
-    ['scroll.horizonally?{"count":1}', "Scroll right"],
+    ['scroll.horizontally?{"count":-1}', "Scroll left"],
+    ['scroll.horizontally?{"count":1}', "Scroll right"],
     ["scroll.home", "Scroll to leftmost"],
     ["scroll.end", "Scroll to rightmost"],
     ["scroll.top", "Scroll to top"],

@@ -16,7 +16,7 @@ export const COMMAND_SHOW_ADDBOOKMARK = "command.show.addbookmark";
 
 // Scrolls
 export const SCROLL_VERTICALLY = "scroll.vertically";
-export const SCROLL_HORIZONALLY = "scroll.horizonally";
+export const SCROLL_HORIZONTALLY = "scroll.horizontally";
 export const SCROLL_PAGES = "scroll.pages";
 export const SCROLL_TOP = "scroll.top";
 export const SCROLL_BOTTOM = "scroll.bottom";
@@ -130,8 +130,8 @@ export interface ScrollVerticallyOperation {
   count: number;
 }
 
-export interface ScrollHorizonallyOperation {
-  type: typeof SCROLL_HORIZONALLY;
+export interface ScrollHorizontallyOperation {
+  type: typeof SCROLL_HORIZONTALLY;
   count: number;
 }
 
@@ -322,7 +322,7 @@ export type Operation =
   | CommandShowBufferOperation
   | CommandShowAddbookmarkOperation
   | ScrollVerticallyOperation
-  | ScrollHorizonallyOperation
+  | ScrollHorizontallyOperation
   | ScrollPagesOperation
   | ScrollTopOperation
   | ScrollBottomOperation
@@ -422,7 +422,7 @@ export const valueOf = (o: any): Operation => {
       assertOptionalBoolean(o, "alter");
       return { type: o.type, alter: Boolean(o.alter) };
     case SCROLL_VERTICALLY:
-    case SCROLL_HORIZONALLY:
+    case SCROLL_HORIZONTALLY:
     case SCROLL_PAGES:
       assertRequiredNumber(o, "count");
       return { type: o.type, count: Number(o.count) };
@@ -524,7 +524,7 @@ export const valueOf = (o: any): Operation => {
 export const isNRepeatable = (type: string): boolean => {
   switch (type) {
     case SCROLL_VERTICALLY:
-    case SCROLL_HORIZONALLY:
+    case SCROLL_HORIZONTALLY:
     case SCROLL_PAGES:
     case NAVIGATE_HISTORY_PREV:
     case NAVIGATE_HISTORY_NEXT:

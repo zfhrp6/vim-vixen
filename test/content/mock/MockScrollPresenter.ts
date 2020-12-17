@@ -17,7 +17,7 @@ export default class MockScrollPresenter implements ScrollPresenter {
     this.pos.y += amount;
   }
 
-  scrollHorizonally(amount: number, _smooth: boolean): void {
+  scrollHorizontally(amount: number, _smooth: boolean): void {
     this.pos.x += amount;
   }
 

@@ -16,6 +16,6 @@ export default class HorizontalScrollOperator
 
   async run(): Promise<void> {
     const smooth = this.getSmoothScroll();
-    this.presenter.scrollHorizonally(this.count, smooth);
+    this.presenter.scrollHorizontally(this.count, smooth);
   }
 }
